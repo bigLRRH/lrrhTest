@@ -5,8 +5,10 @@ description: 知道了基本结构我们就可以写出一段最简单的程序�
 # 3  12345 Hello World！
 
 ```java
-public class HelloWorld{//这行改了个名字
-    public static void main(String []args){//这行照抄
+public class HelloWorld//这行改了个名字
+{
+    public static void main(String []args)//这行照抄
+    {
         System.out.println(12345);
         System.out.println("Hello World！");
     }

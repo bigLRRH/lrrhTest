@@ -47,6 +47,7 @@ public class Test{//改了个名字
         boolean p = True;
       
         int i;//变量也可以直接定义
+        i = 0;//然后再对其赋值
         
         System.out.println(b);
         System.out.println(s);

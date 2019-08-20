@@ -15,7 +15,7 @@ public class Method
         Shuchu(i);
     }
     
-    void Shuchu(int a)
+    static void Shuchu(int a)
     {
         System.out.println(a);
     }

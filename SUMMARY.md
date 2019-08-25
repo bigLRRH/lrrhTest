@@ -16,6 +16,6 @@
 * [6.5  一个有意思的小题目](6.5-yi-ge-you-yi-si-de-xiao-ti-mu-xuan-xiu.md)
 * [更高级的分支（判断）结构](geng-gao-ji-de-fen-zhi-pan-duan-jie-gou.md)
 * [更高级的循环结构](geng-gao-ji-de-xun-huan-jie-gou.md)
-* [7  方法（选修）](7-fang-fa-xuan-xiu.md)
+* [7  函数（选修）](7-fang-fa-xuan-xiu.md)
 * [8 终章](7-zhong-zhang.md)
 

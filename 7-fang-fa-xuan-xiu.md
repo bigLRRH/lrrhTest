@@ -1,8 +1,10 @@
 ---
-description: 函数是程序中非常重要的一部分内容，在有足够的训练之后，就能体会到方法的好处了
+description: 函数是程序中非常重要的一部分内容，在有足够的训练之后，就能体会到方法的好处了。
 ---
 
-# 7  函数（选修）
+# 7  函数
+
+（使用在线编译器运行问题不大，可能会比较慢。
 
 先看一个不太简短也不太聪明的程序：
 
@@ -13,6 +15,7 @@ public class Method
     {
         int i = 1;
         Shuchu(i);
+        Shuchu(2);
     }
     
     static void Shuchu(int a)
@@ -25,7 +28,10 @@ public class Method
 
 输出结果：
 
-`1`
+```text
+1
+2
+```
 
 上面的程序主要是为了讲解函数的用法，于是就把一段简单的代码复杂化了。
 
@@ -41,7 +47,7 @@ public class Method
 
 ### 函数是什么？
 
-其实，我们早在数学中就已经学过函数了，比如说正比例函数y=k\*x,其中y是因变量（也叫函数），k是常数，x是自变量，于是我们每输入一个x就会对应一个y。当然，函数也可以更复杂，比如说y=p\*a+q\*b+r\*c（y是因变量，p、q、r是常数，a、b、c是自变量），这样每输入一组a、b、c就能输出一个y。
+其实，我们早在数学中就已经学过函数了，比如说正比例函数y=k\*x,其中y是因变量（也叫函数，这里叫返回值），k是常数，x是自变量（这里叫参数），于是我们每输入一个x就会对应一个y。当然，函数也可以更复杂，比如说y=p\*a+q\*b+r\*c（y是返回值，p、q、r是常数，a、b、c是参数，这样每输入一组a、b、c就能输出一个y。
 
 在程序中，函数也是一样的，通过函数，可以使我们的程序更加简洁，对检查程序或是以后对程序的维护和使用都是一大捷径。因此，对函数的学习是十分必要的。
 
@@ -56,21 +62,132 @@ public class Method
 }
 ```
 
-下面我们简单的解释一下上方语法的意思。（重要的内容放在后面讲）
+这里只提醒一种返回值类型：void  
+英文单词：void（n.空白）  
+像示例程序一样，有的时候我们只需要执行函数的内容，不需要返回值，这时我们就可以在返回值类型上填void。  
+同样的，当不需要参数时，参数一栏可以直接空着。
 
-1、修饰符：我们常用static  
-2、函数名：（我们给这个方法或函数定义的名字）  
-好了，下面是重要的内容：
+想了想，直接上j一个脚本程序
 
-1、返回值类型：  
-首先介绍一下返回值，返回值也就是我们之前说的y（因变量），机器不知道y是什么类型，因此，y也需要我们给它定义一个类型。比如（int/string等等）
+1、这里直接把[第四章](3.3-wo-na-100-yuan-zhao-hy-mai-yi-ping-3-yuan-de-ke-le-ta-zhao-le-wo-200-dui-bu-dui.md)的_**下面的**_示例程序搬过来。（没有返回值，没有参数，完完全全的脚本）
 
-这里出现了一种新的数据类型void。首先介绍英文单词:void（n.空白）  
-_**当返回值类型为void时，就没有返回值。**_  
-比如说最前面的Shuchu\(\)函数，它的返回值类型就是void，这表示这个函数没有返回值。
+```java
+public class Guide{
+    static void main(String []args){
+        panDuan();
+        panDuan();
+        panDuan();
+    }
+    static void panDuan(){//就是这个脚本方法
+         if(2>1){
+            System.out.println("果然还是2比较大吗");
+        }else{
+            System.out.println("果然还是1比较大吗");
+        }
+    }
+}
+```
 
-2、返回值  
-这里我们先介绍返回值是什么。我们可以看到最前面的示例程序，明明输出了一个1，我们却说它没有返回值，
+输出：
 
-（更新ing
+```text
+果然还是2比较大吗
+果然还是2比较大吗
+果然还是2比较大吗
+```
+
+
+
+2、下面简单介绍一个判断误差的方法。  
+我们的机器人在进行比赛时，会有很多误差，下面先使用条件结构来判断误差。（看一看即可）
+
+我们想要判断a与b相等，但是a与b相差了0.5,
+
+```java
+public class Guide{
+    public static void main(String []args){
+        float a = 2.0f;
+        float b = 2.5f;
+        boolean flag = false;
+        if(Math.abs(a-b)<1.0f){//abs（）方法，参数为数字类型，返回值为输入数字的绝对值
+        //前面的Math表示abs（）方法所在的地址
+            flag = true;
+        }
+        while(flag){
+            System.out.println("helloworld");
+            break;
+        }
+    }
+}
+```
+
+输出：
+
+```text
+helloworld
+```
+
+在机器人的程序中，判断误差的的程序我们可能会多次用到，于是我们就可以为它写一个函数。
+
+这个函数的参数为两个float类型，返回值为boolean类型。
+
+```java
+public class Guide{
+    public static void main(String []args){
+        float a = 2.0f;
+        float b = 1.5f;
+        if(wuCha(a,b)){
+            //a与b相差0.5，差值在1以内，于是wuCha（）函数返回了true
+            System.out.println("helloworld");
+        }
+        if(wuCha(1.0f,3.0f)){
+            //1.0f与3.0f相差2，超过了1，于是wuCha（）函数返回了flase
+            System.out.println("helloworld");
+        }
+    }
+    static boolean wuCha(float a,float b){//这是我们要使用的方法
+        if(Math.abs(a-b)<1.0f){
+            return true;//通过ruturn来返回一个值，类型为前面设置的返回值类型
+        }else{
+            return false;
+        }
+    }
+}
+```
+
+输出：
+
+```text
+helloworld
+```
+
+3、一道题目：一个函数为max的函数，参数为两个int类型的数，返回值为两个数中较大的那个数，如果两个数一样大，返回0。
+
+```java
+public class Guide{
+    public static void main(){
+        max(1,2);
+    }
+    //判断较大的数的函数
+    static int max(int a,int b){//返回值是int类型，所以前面用了int
+        if(a>b){
+            return a;
+        }else if(b>a){
+            return b;
+        }else{
+            return 0;
+        }
+    }
+}
+```
+
+输出:
+
+```text
+2
+```
+
+\*\*一道小题目：写一个名为jueDuiZhi\(\)的方法，参数、返回值都为为int类型，返回参数的绝对值。
+
+
 

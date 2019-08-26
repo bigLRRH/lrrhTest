@@ -13,9 +13,9 @@
 * [4  我拿100元找hy买一瓶3元的可乐，他找了我200，对不对？](3.3-wo-na-100-yuan-zhao-hy-mai-yi-ping-3-yuan-de-ke-le-ta-zhao-le-wo-200-dui-bu-dui.md)
 * [5  666个666](5-666-ge-666.md)
 * [6  程序示例——输出1到100内的偶数](untitled.md)
-* [6.5  一个有意思的小题目](6.5-yi-ge-you-yi-si-de-xiao-ti-mu-xuan-xiu.md)
+* [6.5  一些有意思的小题目](6.5-yi-ge-you-yi-si-de-xiao-ti-mu-xuan-xiu.md)
 * [更高级的分支（判断）结构](geng-gao-ji-de-fen-zhi-pan-duan-jie-gou.md)
 * [更高级的循环结构](geng-gao-ji-de-xun-huan-jie-gou.md)
-* [7  函数（选修）](7-fang-fa-xuan-xiu.md)
+* [7  函数](7-fang-fa-xuan-xiu.md)
 * [8 终章](7-zhong-zhang.md)
 

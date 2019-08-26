@@ -38,7 +38,15 @@ description: 大多数编程语言的入门教程都比较抽象，缺乏实际�
 
 [6、程序示例——输出1到100内的偶数](untitled.md)
 
-[7、终章](7-zhong-zhang.md)
+[6.5、一些有意思的小题目](6.5-yi-ge-you-yi-si-de-xiao-ti-mu-xuan-xiu.md)
+
+[更高级的分支（判断）结构](geng-gao-ji-de-fen-zhi-pan-duan-jie-gou.md)
+
+[更高级的循环结构](geng-gao-ji-de-xun-huan-jie-gou.md)
+
+[7、函数](7-fang-fa-xuan-xiu.md)
+
+[8、终章](7-zhong-zhang.md)
 
 
 

@@ -17,5 +17,7 @@
 * [更高级的分支（判断）结构](geng-gao-ji-de-fen-zhi-pan-duan-jie-gou.md)
 * [更高级的循环结构](geng-gao-ji-de-xun-huan-jie-gou.md)
 * [7  函数](7-fang-fa-xuan-xiu.md)
+* [8  数组](8-shu-zu/README.md)
+  * [8.1  数组的处理](8-shu-zu/8.1-shu-zu-de-chu-li.md)
 * [8 终章](7-zhong-zhang.md)
 

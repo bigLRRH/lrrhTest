@@ -2,7 +2,7 @@
 description: 本章将用分支结构和循环结构输出1到100内的偶数
 ---
 
-# 程序示例——输出1到100内的偶数
+# 6  程序示例——输出1到100内的偶数
 
 首先分析一下这次的问题：  
 1到100我们需要用循环结构来输出，使用计数器  
@@ -17,12 +17,16 @@ public class LastGuide{
     public static void main(String []args){
         
         int i = 1;//计数器
+        
         while(i <= 100){
+        
             if(i%2==0){
                 System.out.println(i);
             }
             i = i + 1;
+            
         }
+        
     }
 }
 ```
